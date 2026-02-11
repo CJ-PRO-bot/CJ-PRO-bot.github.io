@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chabsel Jungney Wangchuk | AI Engineer</title>
+  <style>
+    :root { --bg:#0b1020; --card:#101a33; --text:#e9eefc; --muted:#b9c3e6; --accent:#7aa2ff; }
+    body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial; background:var(--bg); color:var(--text); }
+    .wrap { max-width: 980px; margin: 0 auto; padding: 48px 18px; }
+    .card { background:var(--card); border:1px solid rgba(255,255,255,.08); border-radius:16px; padding:22px; margin:14px 0; }
+    h1 { margin: 0 0 8px; font-size: 34px; }
+    h2 { margin: 0 0 10px; font-size: 18px; letter-spacing: .4px; text-transform: uppercase; color: var(--muted); }
+    p { margin: 8px 0; color: var(--muted); line-height: 1.6; }
+    .row { display:flex; flex-wrap:wrap; gap:12px; margin-top: 14px; }
+    a.btn { display:inline-block; padding:10px 14px; border-radius:12px; border:1px solid rgba(255,255,255,.12);
+            text-decoration:none; color:var(--text); background: rgba(255,255,255,.06); }
+    a.btn:hover { border-color: rgba(122,162,255,.7); }
+    .grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap:12px; }
+    .tag { display:inline-block; padding:6px 10px; border-radius:999px; background: rgba(122,162,255,.12); border:1px solid rgba(122,162,255,.28); margin:6px 8px 0 0; color: var(--text); font-size: 13px; }
+    .small { font-size: 14px; }
+    footer { margin-top: 26px; color: rgba(255,255,255,.5); font-size: 13px; }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="card">
+      <h1>Chabsel Jungney Wangchuk</h1>
+      <p class="small">Aspiring AI Engineer • IT Engineering Student (CST, Bhutan) • Smart City & Civic Tech</p>
+
+      <div class="row">
+        <a class="btn" href="https://www.linkedin.com/in/chabsel-jungney-wangchuk-3a469037b/" target="_blank">LinkedIn</a>
+        <a class="btn" href="https://github.com/CJ-PRO-bot?tab=repositories" target="_blank">GitHub</a>
+        <a class="btn" href="mailto:chabseljungney@gmail.com">Email</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>About</h2>
+      <p>
+        I’m a 2nd-year IT engineering student at the College of Science and Technology, Bhutan, trained in AI through
+        Omdena Academy (AI Foundation + AI Mathematics, 2025–2026). I enjoy building practical AI systems for real-world impact,
+        including smart city solutions in collaboration with GovTech Bhutan and Thimphu Thromde.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Projects</h2>
+      <div class="grid">
+        <div class="card">
+          <strong>ThromAI (Smart City Platform)</strong>
+          <p>AI-based waste & drainage monitoring with image verification, geotagging, and municipal reporting.</p>
+          <p class="small">Tech: Python • CNN • ONNX • PostgreSQL • Docker</p>
+        </div>
+
+        <div class="card">
+          <strong>SUPW Monitoring System</strong>
+          <p>Photo verification + geotagging system for college counseling body to validate community service activities.</p>
+          <p class="small">Tech: Python • SQL • Web tools</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Skills</h2>
+      <span class="tag">Python</span>
+      <span class="tag">SQL</span>
+      <span class="tag">Computer Vision</span>
+      <span class="tag">CNN</span>
+      <span class="tag">NLP</span>
+      <span class="tag">ONNX</span>
+      <span class="tag">PostgreSQL</span>
+      <span class="tag">Docker</span>
+      <span class="tag">Git</span>
+      <span class="tag">Google Colab</span>
+    </div>
+
+    <div class="card">
+      <h2>Certifications</h2>
+      <p><strong>Omdena Academy</strong> — AI Foundation (6 months), AI Mathematics (2 months) <span class="small">(2025–2026)</span></p>
+      <p><strong>DataCamp</strong> — Python (Beginner/Intermediate), Data Visualization, Web Scraping, Supervised ML, Unsupervised ML, NLP</p>
+    </div>
+
+    <div class="card">
+      <h2>Achievements</h2>
+      <p>• Student President, Karma Academy (2023)</p>
+      <p>• Winner, Thimphu Dzongkhag Public Speaking Competition (2019)</p>
+    </div>
+
+    <footer>
+      © <span id="year"></span> Chabsel Jungney Wangchuk • Built with GitHub Pages
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
