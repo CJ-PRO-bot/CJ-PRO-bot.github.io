@@ -3,152 +3,394 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mr.Chabsel Jungney Wangchuk | IT student | AI Engineer| Former School President| Aspiring GovTech & AI innovator | ThromAI Builder</title>
+  <title>Chabsel Jungney Wangchuk | AI Engineer</title>
 
   <style>
-    :root { --bg:#0b1020; --card:#101a33; --text:#e9eefc; --muted:#b9c3e6; --accent:#7aa2ff; }
-    body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial; background:var(--bg); color:var(--text); }
-    .wrap { max-width: 1000px; margin: 0 auto; padding: 40px 16px; }
-    .card { background:var(--card); border:1px solid rgba(255,255,255,.08); border-radius:16px; padding:22px; margin:14px 0; }
-    h1 { margin: 0 0 8px; font-size: 32px; }
-    h2 { margin: 0 0 10px; font-size: 18px; letter-spacing: .4px; text-transform: uppercase; color: var(--muted); }
-    p { margin: 8px 0; color: var(--muted); line-height: 1.6; }
-    ul { color: var(--muted); }
-    .row { display:flex; flex-wrap:wrap; gap:12px; margin-top: 14px; }
-    a.btn { display:inline-block; padding:10px 14px; border-radius:12px; border:1px solid rgba(255,255,255,.12);
-            text-decoration:none; color:var(--text); background: rgba(255,255,255,.06); }
-    a.btn:hover { border-color: rgba(122,162,255,.7); }
-    .tag { display:inline-block; padding:6px 10px; border-radius:999px; background: rgba(122,162,255,.12);
-           border:1px solid rgba(122,162,255,.28); margin:6px 8px 0 0; font-size: 13px; }
-    .profile { width:150px; height:150px; border-radius:50%; object-fit:cover; margin:10px 0; border:2px solid rgba(122,162,255,.4); }
-    footer { margin-top: 26px; color: rgba(255,255,255,.5); font-size: 13px; }
+    :root{
+      --bg:#ffffff;
+      --text:#111827;
+      --muted:#4b5563;
+      --line:#e5e7eb;
+      --card:#ffffff;
+      --soft:#f8fafc;
+      --accent:#1d4ed8;
+      --shadow: 0 10px 30px rgba(17,24,39,.08);
+      --radius: 16px;
+    }
+
+    *{ box-sizing:border-box; }
+    html{ scroll-behavior:smooth; }
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", sans-serif;
+      color:var(--text);
+      background: var(--bg);
+    }
+
+    /* Top dashboard nav */
+    .topbar{
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(255,255,255,.85);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--line);
+    }
+    .navwrap{
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 10px 14px;
+      display:flex;
+      align-items:center;
+      gap:10px;
+      justify-content: space-between;
+    }
+    .brand{
+      font-weight: 800;
+      letter-spacing: .2px;
+      font-size: 14px;
+      color: var(--text);
+      white-space: nowrap;
+    }
+    .nav{
+      display:flex;
+      flex-wrap: wrap;
+      gap:8px;
+      justify-content: flex-end;
+    }
+    .nav a{
+      text-decoration:none;
+      color: var(--muted);
+      font-size: 13px;
+      padding: 8px 10px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+    }
+    .nav a:hover{
+      color: var(--accent);
+      border-color: rgba(29,78,216,.25);
+      background: rgba(29,78,216,.05);
+    }
+
+    /* Layout */
+    .wrap{
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 22px 14px 50px;
+    }
+
+    .card{
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 22px;
+      margin: 14px 0;
+    }
+
+    .hero{
+      text-align:center;
+      padding: 26px 22px;
+      background: linear-gradient(180deg, var(--soft), #fff);
+    }
+
+    .photo{
+      width: 190px;           /* BIGGER PHOTO HERE */
+      height: 190px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid rgba(29,78,216,.25);
+      box-shadow: 0 12px 26px rgba(17,24,39,.10);
+      display:block;
+      margin: 4px auto 14px;  /* CENTER */
+    }
+
+    h1{
+      margin: 0;
+      font-size: 34px;
+      letter-spacing: -.4px;
+    }
+    .subtitle{
+      margin: 8px auto 0;
+      max-width: 720px;
+      color: var(--muted);
+      line-height: 1.6;
+      font-size: 15px;
+    }
+
+    .btnrow{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      justify-content:center;
+      margin-top: 14px;
+    }
+    .btn{
+      display:inline-block;
+      padding: 10px 14px;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      background: #fff;
+      text-decoration:none;
+      color: var(--text);
+      font-size: 14px;
+    }
+    .btn:hover{
+      border-color: rgba(29,78,216,.25);
+      color: var(--accent);
+      background: rgba(29,78,216,.04);
+    }
+    .btn.primary{
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #fff;
+    }
+    .btn.primary:hover{
+      filter: brightness(0.95);
+    }
+
+    h2{
+      margin: 0 0 10px;
+      font-size: 16px;
+      text-transform: uppercase;
+      letter-spacing: .6px;
+      color: #0f172a;
+    }
+
+    p{ margin: 8px 0; color: var(--muted); line-height: 1.7; }
+
+    ul{
+      margin: 10px 0 0;
+      padding-left: 18px;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 12px;
+      margin-top: 10px;
+    }
+
+    .mini{
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 14px;
+      background: #fff;
+    }
+    .mini strong{ color: #111827; }
+    .mini p{ margin: 8px 0 0; }
+
+    .tags{ margin-top: 10px; }
+    .tag{
+      display:inline-block;
+      padding: 7px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: var(--soft);
+      color: #0f172a;
+      font-size: 13px;
+      margin: 6px 8px 0 0;
+    }
+
+    .contact{
+      display:flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    .contact a{
+      text-decoration:none;
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    footer{
+      text-align:center;
+      color: #6b7280;
+      font-size: 13px;
+      margin-top: 18px;
+    }
+
+    /* Mobile: keep nav readable */
+    @media (max-width: 560px){
+      .brand{ display:none; }
+      .photo{ width: 170px; height: 170px; }
+      h1{ font-size: 28px; }
+    }
   </style>
 </head>
 
 <body>
-<div class="wrap">
 
-<!-- HEADER -->
-<div class="card">
-  <h1>Chabsel Jungney Wangchuk</h1>
-
-  <img src="Profile_Photo.jpeg" class="profile">
-
-  <p class="small">
-    Aspiring AI Engineer • IT Engineering Student (CST, Bhutan) • Smart City & Civic Tech
-  </p>
-
-  <div class="row">
-    <a class="btn" href="https://www.linkedin.com/in/chabsel-jungney-wangchuk-3a469037b/" target="_blank">LinkedIn</a>
-    <a class="btn" href="https://github.com/CJ-PRO-bot" target="_blank">GitHub</a>
-    <a class="btn" href="mailto:chabseljungney@gmail.com">Email</a>
+<!-- TOP DASHBOARD NAV -->
+<div class="topbar">
+  <div class="navwrap">
+    <div class="brand">CJ • CV Website</div>
+    <div class="nav">
+      <a href="#summary">Summary</a>
+      <a href="#education">Education</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#achievements">Achievements</a>
+      <a href="#interests">Interests</a>
+      <a href="#contact">Contact</a>
+    </div>
   </div>
 </div>
 
-<!-- SUMMARY -->
-<div class="card">
-  <h2>Professional Summary</h2>
-  <p>
-    Aspiring AI Engineer and Data Analyst pursuing a Bachelor’s degree in Information Technology at the College of Science and Technology, Bhutan. 
-    Formally trained through Omdena Academy (AI Foundation & AI Mathematics, 2025–2026) with multiple DataCamp certifications in Machine Learning and NLP. 
-    Experienced in developing real-world AI solutions, including a government-collaborated smart city platform with GovTech Bhutan and Thimphu Thromde. 
-    Strong leadership background with proven ability in project management, public speaking, and community-driven innovation.
-  </p>
-</div>
+<div class="wrap">
 
-<!-- EDUCATION -->
-<div class="card">
-  <h2>Education</h2>
-  <p><strong>Bachelor of Engineering in Information Technology (2nd Year – Present)</strong></p>
-  <p>College of Science and Technology, Phuentsholing, Bhutan</p>
-  <ul>
-    <li>Core focus: Artificial Intelligence, Databases, Software Engineering, Data Analytics</li>
-    <li>Active contributor to institutional digital innovation initiatives</li>
-  </ul>
-</div>
+  <!-- HERO / INTRO -->
+  <section class="card hero" id="intro">
+    <img class="photo" src="Profile_Photo.jpeg" alt="Chabsel Jungney Wangchuk" />
 
-<!-- CERTIFICATIONS -->
-<div class="card">
-  <h2>Certifications & Training</h2>
+    <h1>Chabsel Jungney Wangchuk</h1>
 
-  <p><strong>AI Foundation Program – Omdena Academy (2025–2026)</strong></p>
-  <ul>
-    <li>End-to-end AI lifecycle: preprocessing, model building, deployment</li>
-    <li>Computer Vision, NLP, and Machine Learning pipelines</li>
-    <li>MLOps principles and real-world project delivery</li>
-  </ul>
+    <p class="subtitle">
+      Aspiring AI Engineer • IT Engineering Student (CST, Bhutan) • Smart City & Civic Tech
+    </p>
 
-  <p><strong>AI Mathematics Specialization – Omdena Academy (2025–2026)</strong></p>
-  <ul>
-    <li>Linear algebra, calculus, probability for AI</li>
-    <li>Neural networks, optimization, deep learning foundations</li>
-  </ul>
+    <div class="btnrow">
+      <a class="btn primary" href="mailto:chabseljungney@gmail.com">Email Me</a>
+      <a class="btn" href="https://www.linkedin.com/in/chabsel-jungney-wangchuk-3a469037b/" target="_blank">LinkedIn</a>
+      <a class="btn" href="https://github.com/CJ-PRO-bot" target="_blank">GitHub</a>
+    </div>
+  </section>
 
-  <p><strong>DataCamp Certifications</strong></p>
-  <ul>
-    <li>Python Beginner & Intermediate</li>
-    <li>Data Visualization</li>
-    <li>Web Scraping</li>
-    <li>Supervised & Unsupervised ML</li>
-    <li>Natural Language Processing</li>
-  </ul>
-</div>
+  <!-- SUMMARY -->
+  <section class="card" id="summary">
+    <h2>Professional Summary</h2>
+    <p>
+      Aspiring AI Engineer and Data Analyst pursuing a Bachelor’s degree in Information Technology at the College of Science and Technology, Bhutan.
+      Formally trained through Omdena Academy (AI Foundation &amp; AI Mathematics, 2025–2026) with multiple DataCamp certifications in Machine Learning and NLP.
+      Experienced in developing real-world AI solutions, including a government-collaborated smart city platform with GovTech Bhutan and Thimphu Thromde.
+      Strong leadership background with proven ability in project management, public speaking, and community-driven innovation.
+    </p>
+  </section>
 
-<!-- PROJECTS -->
-<div class="card">
-  <h2>Key Projects</h2>
+  <!-- EDUCATION -->
+  <section class="card" id="education">
+    <h2>Education</h2>
+    <p><strong>Bachelor of Engineering in Information Technology (2nd Year – Present)</strong></p>
+    <p>College of Science and Technology, Phuentsholing, Bhutan</p>
+    <ul>
+      <li>Core focus: Artificial Intelligence, Databases, Software Engineering, Data Analytics</li>
+      <li>Active contributor to institutional digital innovation initiatives</li>
+    </ul>
+  </section>
 
-  <p><strong>ThromAI – Smart City AI Platform (Thimphu)</strong></p>
-  <ul>
-    <li>AI-powered waste & drainage monitoring using CNN and ONNX</li>
-    <li>Image verification, geotagging, real-time municipal reporting</li>
-    <li>Collaboration with GovTech Bhutan & Thimphu Thromde</li>
-    <li>Tech: Python, PostgreSQL, Docker, Computer Vision, NLP</li>
-  </ul>
+  <!-- CERTIFICATIONS -->
+  <section class="card" id="certifications">
+    <h2>Certifications &amp; Training</h2>
 
-  <p><strong>SUPW Monitoring System – College Counseling Body</strong></p>
-  <ul>
-    <li>Photo verification + geotagging platform</li>
-    <li>Reduced manual supervision workload</li>
-    <li>Positive feedback from counselors</li>
-    <li>Tech: Python, SQL, Web tools</li>
-  </ul>
-</div>
+    <div class="grid">
+      <div class="mini">
+        <strong>Omdena Academy — AI Foundation (2025–2026)</strong>
+        <ul>
+          <li>End-to-end AI lifecycle: preprocessing, model building, deployment</li>
+          <li>Computer Vision, NLP, and Machine Learning pipelines</li>
+          <li>MLOps principles and real-world project delivery</li>
+        </ul>
+      </div>
 
-<!-- SKILLS -->
-<div class="card">
-  <h2>Technical Skills</h2>
+      <div class="mini">
+        <strong>Omdena Academy — AI Mathematics (2025–2026)</strong>
+        <ul>
+          <li>Linear algebra, calculus, probability for AI</li>
+          <li>Neural networks, optimization, deep learning foundations</li>
+        </ul>
+      </div>
 
-  <span class="tag">Python</span>
-  <span class="tag">SQL</span>
-  <span class="tag">CNN</span>
-  <span class="tag">NLP</span>
-  <span class="tag">ONNX</span>
-  <span class="tag">PostgreSQL</span>
-  <span class="tag">Docker</span>
-  <span class="tag">Git</span>
-  <span class="tag">Google Colab</span>
-</div>
+      <div class="mini">
+        <strong>DataCamp Certificates</strong>
+        <ul>
+          <li>Python Beginner &amp; Intermediate</li>
+          <li>Data Visualization</li>
+          <li>Web Scraping</li>
+          <li>Supervised &amp; Unsupervised ML</li>
+          <li>Natural Language Processing (NLP)</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-<!-- ACHIEVEMENTS -->
-<div class="card">
-  <h2>Achievements & Leadership</h2>
-  <ul>
-    <li>Student President – Karma Academy (2023)</li>
-    <li>Winner – Thimphu Dzongkhag Public Speaking (2019)</li>
-    <li>Collaboration with GovTech Bhutan on digital transformation</li>
-  </ul>
-</div>
+  <!-- PROJECTS -->
+  <section class="card" id="projects">
+    <h2>Key Projects</h2>
 
-<!-- INTERESTS -->
-<div class="card">
-  <h2>Interests</h2>
-  <p>AI Research • Smart Cities • Poetry & Writing • Community Service • Civic Technology</p>
-</div>
+    <div class="grid">
+      <div class="mini">
+        <strong>ThromAI — Smart City AI Platform (Thimphu)</strong>
+        <ul>
+          <li>AI-powered waste &amp; drainage monitoring using CNN and ONNX</li>
+          <li>Image verification, geotagging, real-time municipal reporting</li>
+          <li>Collaboration with GovTech Bhutan &amp; Thimphu Thromde</li>
+          <li>Tech: Python, PostgreSQL, Docker, Computer Vision, NLP</li>
+        </ul>
+      </div>
 
-<footer>
-  © <span id="year"></span> Chabsel Jungney Wangchuk • GitHub Pages Portfolio
-</footer>
+      <div class="mini">
+        <strong>SUPW Monitoring System — College Counseling Body</strong>
+        <ul>
+          <li>Photo verification + geotagging platform</li>
+          <li>Reduced manual supervision workload</li>
+          <li>Positive feedback from counselors</li>
+          <li>Tech: Python, SQL, Web tools</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="card" id="skills">
+    <h2>Technical Skills</h2>
+    <div class="tags">
+      <span class="tag">Python</span>
+      <span class="tag">SQL</span>
+      <span class="tag">CNN</span>
+      <span class="tag">NLP</span>
+      <span class="tag">ONNX</span>
+      <span class="tag">PostgreSQL</span>
+      <span class="tag">Docker</span>
+      <span class="tag">Git</span>
+      <span class="tag">Google Colab</span>
+    </div>
+  </section>
+
+  <!-- ACHIEVEMENTS -->
+  <section class="card" id="achievements">
+    <h2>Achievements &amp; Leadership</h2>
+    <ul>
+      <li><strong>Student President — Karma Academy (2023)</strong></li>
+      <li><strong>Winner — Thimphu Dzongkhag Public Speaking Competition (2019)</strong></li>
+      <li>Collaboration with GovTech Bhutan on digital transformation</li>
+    </ul>
+  </section>
+
+  <!-- INTERESTS -->
+  <section class="card" id="interests">
+    <h2>Interests</h2>
+    <p>AI Research • Smart Cities • Poetry &amp; Writing • Community Service • Civic Technology</p>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="card" id="contact">
+    <h2>Contact</h2>
+    <p>If you’d like to collaborate or connect, feel free to reach out:</p>
+    <div class="contact">
+      <span>📞 <strong>+975 77442271</strong></span>
+      <span>📧 <a href="mailto:chabseljungney@gmail.com">chabseljungney@gmail.com</a></span>
+      <span>🔗 <a href="https://www.linkedin.com/in/chabsel-jungney-wangchuk-3a469037b/" target="_blank">LinkedIn</a></span>
+      <span>💻 <a href="https://github.com/CJ-PRO-bot" target="_blank">GitHub</a></span>
+    </div>
+  </section>
+
+  <footer>
+    © <span id="year"></span> Chabsel Jungney Wangchuk • CV Website on GitHub Pages
+  </footer>
 
 </div>
 
